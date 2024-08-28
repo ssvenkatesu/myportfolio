@@ -1,0 +1,371 @@
+/* General reset for better cross-browser consistency */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #495057;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth fade-in for the body content */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInUp 1.5s ease;
+}
+
+/* Slide-in animation for the container */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #343a40;
+    
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Pulse animation for the button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+p {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Background animation */
+.bg {
+    background-color: #030303;
+    height: 556vh;
+    background-size: cover;
+    animation: bgSlide 10s infinite alternate ease-in-out;
+}
+
+@keyframes bgSlide {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+
+.nav-bar {
+    color: aliceblue;
+    background-color:black;
+    font-family: "Bree Serif";
+    border-style: solid;
+    border-color: #8f1d00;
+    border-width: 5px;
+    font-size: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-bar:hover {
+    background-color: black;
+    transform: scale(1.03);
+}
+
+.list {
+    list-style-type: none;
+}
+
+.lico {
+    padding: 20px;
+    font-size: 35px;
+}
+
+.header {
+    padding: 20px;
+}
+
+.profile-imag {
+    margin: 20px;
+    height: 70vh;
+    width: 40vw;
+    margin-top:25vh;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+ 
+    border-width: 10px;
+    border-style: solid;
+    border-color: #8f1d00;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    animation: rotate 5s  alternate ease-in-out;
+}
+
+
+.about {
+    height: 50vh;
+    padding: 20px;
+}
+
+.head {
+    color: #8f1d00;
+}
+
+.about-para {
+    color: rgb(132, 141, 141);
+}
+
+.about-name {
+    color: white;
+}
+
+.desc {
+    padding: 10px;
+    margin-top: 35vh;
+}
+
+.anchor {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.anchor:hover {
+    color:rgb(158, 49, 49);
+    text-decoration: none;
+}
+.about-name {
+    color: white;
+    font-size: 2rem; /* Adjust the font size as needed */
+    border-right: 2px solid white; /* Create a cursor effect */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Hide the overflowing text to create the typing effect */
+    width: 0; /* Initial width for the animation */
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.about-name {
+    color: white;
+    font-size: 2rem; /* Adjust the font size as needed */
+    border-right: 2px solid white; /* Create a cursor effect */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Hide the overflowing text to create the typing effect */
+    width: 0; /* Initial width for the animation */
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end 4s; /* Adjust blink timing */
+}
+.about-name {
+    color: white;
+    font-size: 2rem; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Hide the overflowing text to create the typing effect */
+    position: relative;
+    border-right: 2px solid white; /* Create a cursor effect */
+    animation: typing 4s steps(30, end) forwards; /* Apply typing animation */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 55%; }
+}
+
+/* Cursor positioning */
+.about-name::after {
+    content: '';
+    position: absolute;
+    right: 0; /* Align the cursor to the end of the text */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Width of the cursor */
+    background-color: white; /* Cursor color */
+    animation: blink-caret 0.75s step-end infinite; /* Blink animation */
+    transition: opacity 0.5s ease; /* Smooth transition for cursor hiding */
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to { background-color: transparent; }
+    50% { background-color: white; }
+}
+
+/* Blinking text effect after typing */
+@keyframes blink-text {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Hide cursor after typing */
+.hide-cursor::after {
+    opacity: 0; /* Hide the cursor */
+}
+
+/* Apply blinking text animation */
+.blink-text {
+    animation: blink-text 1s step-end infinite; /* Blinking effect */
+    visibility: hidden; /* Start hidden */
+}
+
+/* Show the text after typing */
+.show-text {
+    visibility: visible; /* Make the text visible */
+}
+.seperator{
+    background-color: #8f1d00;
+    height:10px;
+    margin-top:60vh;
+    background-size: cover;
+    border-radius: 100%;
+}
+/* Ensure the navbar is sticky */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+ /* Add a background color to avoid transparency when scrolling */
+    padding: 10px 0; /* Adjust padding as needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a subtle effect */
+}
+.project-header{
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    font-size:80px;
+
+}
+#sectionproject{
+    margin-top:20vh;
+}
+.project-para{
+    padding:10px;
+    margin:25px;
+}
+#seperatorachieves{
+    background-color: #8f1d00;
+    height:10px;
+    margin-top:20vh;
+    background-size: cover;
+    border-radius: 100%;
+}
+.imag-certi{
+    height:40vh;
+    width:25vw;
+    margin:20px;
+    border-color: #8f1d00;
+    border-style:solid;
+    border-radius: 20px;
+    border-width:10px;
+}
+.Certifications{
+    margin-top:20vh;
+}
+.header-contact{
+    color:white;
+    padding: 20px;
+    margin-top:25vh;
+    text-align: center;
+}
+#seperatorachieves2{
+    background-color: #8f1d00;
+    height:10px;
+    margin-top:20vh;
+    background-size: cover;
+    border-radius: 100%;
+}
+.form-input{
+    border-color:#8f1d00;
+    border-style:solid;
+    border-width:5px;width:33vw;
+}
+.but{
+    
+    color:white;
+    width:20vw;
+
+}
+.table{
+    padding:10px;
+}
+.butt{
+    background-color: aliceblue;
+    text-align:center;
+}
+.profile-link{
+    height:50px;
+    margin:50px;
+
+}
+.socialprofile{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
